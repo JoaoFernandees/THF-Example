@@ -1,0 +1,59 @@
+<div class="thf-mt-4 thf-ml-1">
+    <font class="thf-font-subtitle">Informações iniciais</font>
+
+    <div class="thf-mt-4 thf-xl-12 thf-lg-12 thf-md-12 thf-sm-12">
+        <thf-divider t-label="Dados Gerais"></thf-divider>
+    </div>
+
+    <form>
+        <div class="thf-row">
+            <div class="thf-row">
+                <thf-select
+                    class="thf-xl-6 thf-lg-6 thf-md-6 thf-sm-6"
+                    name="inicio"
+                    t-placeholder="Informe o nome do transportador"
+                    t-maxlenght="50"
+                    t-label="Transportador | Fornecedor"
+                    t-disabled="true"
+                    t-optional="true">
+                </thf-select>
+            </div>
+
+            <thf-select
+                class="thf-mt-2 thf-xl-3 thf-lg-3 thf-md-3 thf-sm-3"
+                name="produto"
+                t-placeholder="Selecione o tipo de produto"
+                t-maxlenght="50"
+                t-label="Produto"
+                t-optional="true">
+            </thf-select>
+
+            <thf-input
+                class="thf-mt-2 thf-xl-3 thf-lg-3 thf-md-3 thf-sm-3"
+                name="transportadorFornecedor"
+                t-placeholder="Informe o peso"
+                t-maxlenght="50"
+                t-label="Peso"
+                t-optional="true">
+            </thf-input>
+
+            <thf-input
+                class="thf-mt-2 thf-xl-3 thf-lg-3 thf-md-3 thf-sm-3"
+                name="transportadorFornecedor"
+                t-placeholder="Informe quantas toneladas"
+                t-maxlenght="50"
+                t-label="Cubagem"
+                t-optional="true">
+            </thf-input>
+
+            <thf-input
+                class="thf-mt-2 thf-xl-3 thf-lg-3 thf-md-3 thf-sm-3"
+                name="transportadorFornecedor"
+                t-placeholder="Informe quantos metros cubicos"
+                t-maxlenght="50"
+                t-label="Volumes"
+                t-optional="true">
+            </thf-input>
+        </div>
+    </form>
+</div>

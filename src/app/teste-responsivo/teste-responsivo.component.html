@@ -1,0 +1,22 @@
+<thf-page-default
+    t-title='Teste responsivo'
+    [t-actions]="getAcoesNovaJanela()">
+
+    <div class="thf-row">
+        <thf-stepper
+            [t-step]="etapa"
+            t-sequential="true"
+            t-orientation="horizontal"
+            [t-steps]="etapas"
+            (t-change-step)="passoAlterado($event)">
+        </thf-stepper>
+        
+        <div [hidden]="etapa != 1">
+            <app-teste-stepper></app-teste-stepper>
+        </div>
+
+        <div [hidden]="etapa != 2">
+            <app-teste-stepper-second></app-teste-stepper-second>
+        </div>
+    </div> 
+</thf-page-default>
