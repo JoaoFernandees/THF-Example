@@ -1,0 +1,82 @@
+<thf-page-default
+    t-title="Agendamento Transportador"
+    [t-actions]="acoesPagina">
+
+    <div class="thf-row">
+        <div clas="thf-row">
+            <div class="thf-sm-12 thf-md-12 thf-lg-12 thf-xl-12">
+                <thf-multiselect
+                    name="multiselect"
+                    t-label="Processos"
+                    [t-options]="opcoesProcesso"
+                    t-placeholder="Informe um ou mais processos">
+                </thf-multiselect>
+                <div class="thf-mt-2">
+                    <thf-multiselect
+                        name="multiselect"
+                        t-label="Locais"
+                        [t-options]="opcoesLocais"
+                        t-placeholder="Informe um ou mais locais">
+                    </thf-multiselect>
+                </div>
+                <div class="thf-mt-2">
+                    <thf-multiselect
+                        name="multiselect"
+                        t-label="Transportador | Fornecedor"
+                        [t-options]="opcoesTransportadorFornecedor"
+                        t-placeholder="Informe um ou mais fornecedores ou transportadores">
+                    </thf-multiselect>
+                </div>
+                <div class="thf-mt-2">
+                    <thf-multiselect
+                        name="multiselect"
+                        t-label="Produto"
+                        [t-options]="opcoesProduto"
+                        t-placeholder="Informe um ou mais produtos">
+                    </thf-multiselect>
+                </div>
+                <div class="thf-mt-2">
+                    <thf-multiselect
+                        name="multiselect"
+                        t-label="Tipo de veiculo"
+                        [t-options]="opcoesTipoVeiculo"
+                        t-placeholder="Informe um ou mais veiculos">
+                    </thf-multiselect>
+                </div>
+            </div>
+        </div>
+
+        <div class="thf-md-9">
+            <kendo-scheduler [kendoSchedulerBinding]="events" scrollTime="08:00" style="height: 600px;">
+
+            <ng-template kendoSchedulerToolbarTemplate let-selectedDate="selectedDate" let-views="views">
+                <div class="thf-row">
+                    <div class="thf-lg-10">
+                        <app-calendario-navegacao [selectedDate]="selectedDate"></app-calendario-navegacao>
+                    </div>
+                </div>
+                <thf-select name="select" class="thf-ml-2 selected-view" [(ngModel)]="selectedViewIndex"
+                    (t-change)="onSchedulerViewChange($event)"
+                    [t-options]="[{label: 'Dia', value: 1}, {label: 'Semana', value: 2}, {label: 'Mês', value: 3} ]">
+                </thf-select>
+            </ng-template>
+
+            <kendo-scheduler-day-view>
+            </kendo-scheduler-day-view>
+
+            <kendo-scheduler-week-view>
+            </kendo-scheduler-week-view>
+
+            <kendo-scheduler-month-view>
+            </kendo-scheduler-month-view>
+
+            <kendo-scheduler-timeline-view>
+            </kendo-scheduler-timeline-view>
+
+            <kendo-scheduler-agenda-view>
+            </kendo-scheduler-agenda-view>
+            
+            </kendo-scheduler>
+        </div>
+    </div>
+</thf-page-default>
