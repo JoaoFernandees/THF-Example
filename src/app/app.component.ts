@@ -12,17 +12,17 @@ export class AppComponent {
   menuItems = [
     {
       action: null,
-      icon: 'thf-icon-world',
-      label: 'Home',
-      link: '/home',
-      shortLabel: 'Home'
-    },
-    {
-      action: null,
       icon: 'thf-icon-calendar-ok',
       label: 'Teste responsividade',
       link: '/responsivo',
       shortLabel: 'Responsividade'
+    },
+    {
+      action: null,
+      icon: 'thf-icon-calendar-ok',
+      label: 'Calendário',
+      link: '/calendario',
+      shortLabel: 'Calendário'
     },
   ];
 }

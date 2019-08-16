@@ -4,21 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
     path: 'responsivo',
     loadChildren: () => import('./teste-responsivo/teste-responsivo.module').then(m => m.TesteResponsivoModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-  },
-  {
-    path: '**',
-    redirectTo: '/home'
+    path: 'calendario',
+    loadChildren: () => import('./calendario/calendario.module').then(m => m.CalendarioModule)
   }
 ];
 
